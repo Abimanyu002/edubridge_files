@@ -1,0 +1,14 @@
+.name {
+	background-color:DodgerBlue;
+	font-family: Sans-serif;
+	color:white;}
+}
+.container {
+  display: flex;
+}
+
+.section {
+  flex: 1;
+ 
+  padding: 20px;
+}

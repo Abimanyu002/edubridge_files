@@ -1,0 +1,43 @@
+create database studentssheet;
+create table studentdetails(
+stud_id int IDENTITY(100,1) PRIMARY KEY,
+firstname char(30),
+lastname char(30),
+address varchar(100) unique,
+city char(20),
+marks int)
+insert into studentdetails (firstname,lastname,address,city,marks) values ('dinesh','kumar','1 medical college road','thanjavur',99);
+insert into studentdetails (firstname,lastname,address,city,marks) values ('kiran','kishore','2 medical college road','thanjavur',100);
+insert into studentdetails (firstname,lastname,address,city,marks) values ('abimanyu','mutharasan','3 medical college road','thanjavur',91);
+select * from studentdetails;
+SELECT firstname,lastname FROM studentdetails where stud_id=101;
+select firstname ,marks from studentdetails where stud_id=101 and firstname='kiran';
+select count(stud_id) from studentdetails;
+select avg(marks) from studentdetails;
+select sum(marks) from studentdetails;
+select min(marks) from studentdetails;
+select max(marks) from studentdetails;
+select avg(marks) from studentdetails;
+select distinct(marks) from studentdetails;
+update studentdetails set marks=95 where stud_id=101;
+truncate table studentdetails;
+delete from studentdetails where stud_id=101;
+truncate firstname from studentdetails where stud_id=102;
+alter table studentdetails add grade varchar;
+update studentdetails set grade='O' where stud_id=101;
+update studentdetails set grade='O' where stud_id=102;
+update studentdetails set grade='O' where stud_id=100;
+alter table studentdetails drop column grade;
+alter table studentdetails alter column grade char(4);
+select firstname,lastname from studentdetails where marks is null;
+select stud_id as id from studentdetails;
+select sum(marks) from studentdetails group by stud_id having sum(marks)<95;
+select count(firstname) from studentdetails  order by marks desc;
+select firstname from studentdetails where marks<=95;
+select firstname from studentdetails where marks>=95;
+select firstname from studentdetails where marks=95;
+select firstname from studentdetails where marks<95;
+select firstname from studentdetails where marks>95;
+select firstname from studentdetails where marks!=95;
+
+

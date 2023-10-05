@@ -1,0 +1,15 @@
+create table student(student_id int not null identity(100,1) primary key,
+fname varchar(20),
+lname varchar(20),
+address varchar(30),
+city varchar(30),
+marks int);
+INSERT INTO STUDENT(FNAME,LNAME,ADDRESS,CITY,MARKS)VALUES('JOHN','PAUL','MG ROAD','PUNJAB',48);
+INSERT INTO STUDENT(FNAME,LNAME,ADDRESS,CITY,MARKS)VALUES('alex','PAUL','MG ROAD','PUNJAB',48);
+INSERT INTO STUDENT(FNAME,LNAME,ADDRESS,CITY,MARKS)VALUES('chris','PAUL','MGx ROAD','tamil nadu',58);
+INSERT INTO STUDENT(FNAME,LNAME,ADDRESS,CITY,MARKS)VALUES('vincent','PAUL','MGr ROAD','gujarat',38);
+INSERT INTO STUDENT(FNAME,LNAME,ADDRESS,CITY,MARKS)VALUES('JOHN','wick','MGy ROAD','haryana',46);
+drop table student;
+select * from student where fname='john' or fname='alex';
+select * from student where student_id in (100,102,104);
+SELECT *  FROM student WHERE student_id BETWEEN 100 AND 103; 
